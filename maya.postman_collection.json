@@ -1,0 +1,164 @@
+{
+	"id": "4731808a-4f1a-2eba-89cc-531ac9c09414",
+	"name": "maya",
+	"description": "",
+	"order": [
+		"60da716b-db8a-901d-6ebb-28b0167bf084",
+		"37433fc5-63d7-a275-28b2-02dc0f54222b",
+		"11c55933-fad8-1f72-2029-501c948d7688",
+		"2a0e1acb-5bfe-342c-9912-c8c7d295511a",
+		"55745451-867b-025a-988c-d4985d3fea7d"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1539885677132,
+	"owner": "385762",
+	"public": false,
+	"requests": [
+		{
+			"id": "11c55933-fad8-1f72-2029-501c948d7688",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://maya-api.azurewebsites.net/orders",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "4731808a-4f1a-2eba-89cc-531ac9c09414",
+			"data": [],
+			"dataMode": "raw",
+			"name": "create order",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1539885857746,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{  \r\n   \"Id\":\"2\",\r\n   \"SellerId\":\"seller-1\",\r\n   \"CustomerId\":\"customer-2\",\r\n   \"products\":[  \r\n      {  \r\n         \"ProductId\":\"2\",\r\n         \"ProductValue\":\"13\",\r\n         \"ProductAmount\":\"3\"\r\n      }\r\n   ]\r\n}"
+		},
+		{
+			"id": "2a0e1acb-5bfe-342c-9912-c8c7d295511a",
+			"headers": "",
+			"headerData": [],
+			"url": "https://maya-api.azurewebsites.net/orders",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "4731808a-4f1a-2eba-89cc-531ac9c09414",
+			"data": null,
+			"dataMode": "params",
+			"name": "get all orders",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1539885889578,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "37433fc5-63d7-a275-28b2-02dc0f54222b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://maya-api.azurewebsites.net/products",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539885771918,
+			"name": "get products",
+			"description": "",
+			"collectionId": "4731808a-4f1a-2eba-89cc-531ac9c09414",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "55745451-867b-025a-988c-d4985d3fea7d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://maya-api.azurewebsites.net/ethers",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "4731808a-4f1a-2eba-89cc-531ac9c09414",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Create money transfer in ether",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1539885923843,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n    \"Balance\": \"\",\r\n    \"GasPrice\": \"\",\r\n    \"TransactionCount\": \"\",\r\n    \"Value\": \"100\"\r\n}"
+		},
+		{
+			"id": "60da716b-db8a-901d-6ebb-28b0167bf084",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://maya-api.azurewebsites.net/products",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "4731808a-4f1a-2eba-89cc-531ac9c09414",
+			"data": [],
+			"dataMode": "raw",
+			"name": "create product",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1539885679080,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n    \"Id\": \"2\",\r\n    \"Description\": \"Long Pants\",\r\n    \"Value\": \"17\",\r\n    \"Created_date\": \"2018-12-12\",\r\n    \"Type\": \"Pants\"\r\n}"
+		}
+	]
+}
