@@ -8,22 +8,26 @@ var OrderSchema = new Schema({
     type: String,
     required: 'orderId'
   },
-  ProductId: {
+  SellerId: {
     type: String,
-    required: 'productId'
+    required: 'sellerId'
   },
-  ProductValue: {
-    type: Number,
-    default: 0.0
+  CustomerId: {
+    type: String,
+    required: 'customerId'
   },
-  ProductAmount: {
-    type: Number,
-    default: 0
-  },
-  Created_date: {
-    type: Date,
-    default: Date.now
-  }
+  products: [{
+      ProductId: {
+        type: String
+      },
+      ProductValue: {
+        type: String
+      },
+      ProductAmount: {
+        type: String
+      }
+    }
+  ]
 });
 
 module.exports = mongoose.model('Orders', OrderSchema);
