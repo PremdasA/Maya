@@ -4,7 +4,7 @@ module.exports = function(app) {
 
   // todoList Routes
   app.route('/ethers')
-    .get(ethers.get_wallet_balance);
+    .post(ethers.wallet_pay);
     // .post(orders.create_a_order);
 
 
