@@ -4,7 +4,9 @@ var express = require('express'),
     mongoose = require('mongoose'),
     productModel= require('./models/productModel'), //created model loading here
     orderModel = require('./models/orderModel'), //created model loading here
-    bodyParser = require('body-parser');
+    etherModel = require('./models/etherModel'), //created model loading here
+    bodyParser = require('body-parser'),
+    ethers = require('ethers');
     
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
@@ -23,6 +25,9 @@ routesproductRoutes(app); //register the route
 
 var routesorderRoutes = require('./routes/orderRoutes'); //importing route
 routesorderRoutes(app); //register the route
+
+var routesEtherRoutes = require('./routes/etherRoutes'); //importing route
+routesEtherRoutes(app); //register the route
 
 app.listen(port);
 console.log('todo list RESTful API server started on: ' + port);
