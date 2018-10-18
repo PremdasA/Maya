@@ -3,32 +3,15 @@
 
  var mongoose = require('mongoose'),
   Order = mongoose.model('Orders');
-// var Products = [
-//     {
-//         Id: "999",
-//         Value: 3.4,
-//         Coin: "NIS",
-//         Type: "Pants"
-//     },
-//     {
-//         Id: "998",
-//         Value: 3.5,
-//         Coin: "NIS",
-//         Type: "Pants"
-//     }
-// ];
 
-// var Product = function(){
-//     return Products;
-// }
 
-// exports.list_all_products = function(req, res) {
-//     Product.find({}, function(err, product) {
-//     if (err)
-//       res.send(err);
-//     res.json(product);
-//   });
-// };
+exports.list_all_orders = function(req, res) {
+    Order.find({}, function(err, order) {
+    if (err)
+      res.send(err);
+    res.json(order);
+  });
+};
 
 
 
