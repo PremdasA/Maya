@@ -1,0 +1,25 @@
+{
+  "name": "maya",
+  "version": "1.0.0",
+  "description": "maya packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PremdasA/Maya.git"
+  },
+  "keywords": [
+    "maya"
+  ],
+  "author": "Premdas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PremdasA/Maya/issues"
+  },
+  "homepage": "https://github.com/PremdasA/Maya#readme",
+  "dependencies": {
+    "web3": "^1.0.0-beta.36"
+  }
+}
