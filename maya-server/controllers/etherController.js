@@ -37,12 +37,17 @@ var mongoose = require('mongoose'),
 
 exports.wallet_pay = function (req, res) {
 
+  const privateKey = "0xd00a3beb08fB68630ae30e20a905169df423c1c2efBc49d61a1bbde9dc493237"; // robspen temp
+  const sellerAccount = "0xa18DbD977BD1b7daCCC910d3287b1EA15F2F8e83"
+  const localFeeAccount = "0xfEd9D219a2F8Bfc5BFc94A1F3a5E86D3319e1c85"
   var new_ether = new Ether(req.body);
+  var targetAddress = "";
 
-  var targetAddress = "0xa18DbD977BD1b7daCCC910d3287b1EA15F2F8e83";
-  //var privateKey = "0x0123456789012345678901234567890123456789012345678901234567890123"; // robspen temp
-  //var privateKey = "0xD00A3BEB08FB68630AE30E20A905169DF423C1C2EFBC49D61A1BBDE9DC493237"; // robspen temp
-  var privateKey = "0xd00a3beb08fB68630ae30e20a905169df423c1c2efBc49d61a1bbde9dc493237"; // robspen temp
+  if(new_ether.TransactionType == "Pay")
+    targetAddress = sellerAccount;
+  else 
+    targetAddress = localFeeAccount;
+
 
   var wallet = new ethers.Wallet(privateKey);
 
@@ -70,13 +75,16 @@ exports.wallet_pay = function (req, res) {
 
     //Update value to change
     var value = new_ether.Value;
+
     new_ether.Balance = balance;
     new_ether.GasPrice = gasPrice;
     new_ether.TransactionCount = transactionCount;
 
+    console.log(new_ether.Value);
+    console.log(hexEncode(value));
+    console.log(value);
     console.log(gasPrice);
     console.log(balance);
-    console.log(value);
     console.log(transactionCount);
 
     var transaction = {

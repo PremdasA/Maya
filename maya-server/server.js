@@ -5,6 +5,7 @@ var express = require('express'),
     productModel= require('./models/productModel'), //created model loading here
     orderModel = require('./models/orderModel'), //created model loading here
     etherModel = require('./models/etherModel'), //created model loading here
+    feeModel = require('./models/feeModel'), //created model loading here
     bodyParser = require('body-parser'),
     ethers = require('ethers');
     
@@ -29,5 +30,8 @@ routesorderRoutes(app); //register the route
 var routesEtherRoutes = require('./routes/etherRoutes'); //importing route
 routesEtherRoutes(app); //register the route
 
+var routesFeeRoutes = require('./routes/feeRoutes'); //importing route
+routesFeeRoutes(app); //register the route
+
 app.listen(port);
-console.log('todo list RESTful API server started on: ' + port);
+console.log('MAYA API server started on: ' + port);

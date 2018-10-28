@@ -1,11 +1,10 @@
 'use strict';
 module.exports = function(app) {
-  var orders = require('../controllers/orderController');
+  var fees = require('../controllers/feeController');
 
   // todoList Routes
-  app.route('/orders')
-    .get(orders.list_all_orders)
-    .post(orders.create_a_order);
+  app.route('/fees')
+      .post(fees.create_a_fee);
 
 
 //   app.route('/products/:productId')

@@ -16,6 +16,9 @@ var EtherSchema = new Schema({
   Value: {
     type: String
   },
+  TransactionType: {
+    type: String
+  },
 });
 
 module.exports = mongoose.model('Ethers', EtherSchema);

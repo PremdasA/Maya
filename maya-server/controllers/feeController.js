@@ -2,26 +2,15 @@
 
 
  var mongoose = require('mongoose'),
-  Product = mongoose.model('Products');
+  Fee = mongoose.model('Fees');
 
 
-exports.list_all_products = function(req, res) {
-    Product.find({}, function(err, product) {
+exports.create_a_fee = function(req, res) {
+  var new_fee = new Fee(req.body);
+  new_fee.save(function(err, order) {
     if (err)
       res.send(err);
-    res.json(product);
-  });
-};
-
-
-
-
-exports.create_a_product = function(req, res) {
-  var new_product = new Product(req.body);
-  new_product.save(function(err, product) {
-    if (err)
-      res.send(err);
-    res.json(product);
+    res.json(order);
   });
 };
 
